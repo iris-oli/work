@@ -11,8 +11,14 @@ jobs:
     steps:
       -name:baixar código do repositori
       uses: actions/checkout@v4
-      
+
       -name: configurar py
       uses: actions/setup-python@v5
       with
         python-version: '3.12'
+
+      -name: instalar dependecias
+      run:pip install pytest 
+
+      -name:executar testes
+      run:python 
