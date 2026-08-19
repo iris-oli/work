@@ -17,6 +17,22 @@ jobs:
       with
         python-version: '3.12'
 
+jobs:
+  teste:
+    runs-on:ubuntu-latest
+    steps:
+    -run:pytest
+
+    deploy:
+    needs:test
+    runs-on:ubuntu-latest
+    steps:
+    -runs-on:ubuntu-latest
+    steps:
+    -run:echo "deploy realizado"
+
+
+
       -name: instalar dependecias
       run:pip install pytest 
 
